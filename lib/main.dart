@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/containers/about_widget.dart';
-import 'package:portfolio/containers/footer_widget.dart';
-import 'package:portfolio/containers/home_widget.dart';
-import 'package:portfolio/containers/project1_widget.dart';
-import 'package:portfolio/containers/project2_widget.dart';
-import 'package:portfolio/containers/project3_widget.dart';
-import 'package:portfolio/containers/services_widget.dart';
-import 'package:portfolio/containers/testi_widget.dart';
+import 'package:portfolio/web_views/about_widget.dart';
+import 'package:portfolio/web_views/footer_widget.dart';
+import 'package:portfolio/web_views/home_widget.dart';
+import 'package:portfolio/web_views/project1_widget.dart';
+import 'package:portfolio/web_views/project2_widget.dart';
+import 'package:portfolio/web_views/project3_widget.dart';
+import 'package:portfolio/web_views/services_widget.dart';
+import 'package:portfolio/web_views/testi_widget.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 void main() {
