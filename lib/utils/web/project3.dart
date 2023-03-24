@@ -44,7 +44,7 @@ class Project3 extends StatelessWidget {
                           ),
                           const Text(
                             "CRYPTO\nTREND CHECKER APP",
-                            style: kTextStyleWhite,
+                            style: kTitleTextBlack,
                           ),
                           const SizedBox(
                             height: 20,

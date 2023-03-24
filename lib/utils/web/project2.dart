@@ -33,7 +33,7 @@ class Project2 extends StatelessWidget {
                           ),
                           const Text(
                             "FASK -\nRESTAURANT APP",
-                            style: kTextStyleWhite,
+                            style: kTitleTextBlack,
                           ),
                           const SizedBox(
                             height: 20,

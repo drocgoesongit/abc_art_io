@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../about_me.dart';
+import '../utils/web/about_me.dart';
 
 class AboutWidget extends StatelessWidget {
   const AboutWidget({Key? key}) : super(key: key);

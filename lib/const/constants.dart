@@ -9,17 +9,33 @@ const kGithubUrl = "https://github.com/drocgoesongit";
 const kInstaUrl = "https://www.instagram.com/mirza_nabeel_7/";
 const kGmail = "";
 
+const kMainAccentColor = Color(0xFF32FF88);
+const kSubtleblack = Color(0xFF383838);
+const kBackgroundSubtleTealColor = Color(0xFFEEFFF5);
+
 const kTextStyle = TextStyle(
   fontSize: 20.0,
-  fontFamily: 'Poppins',
-  color: kDarkBlueAccentColor,
+  fontFamily: 'Montserrat',
+  color: kSubtleblack,
 );
 
-const kTextStyleWhite = TextStyle(
+const kTextBlack24 = TextStyle(
+  fontSize: 24.0,
+  fontFamily: 'Montserrat',
+  color: kSubtleblack,
+);
+
+const kTextBlack20 = TextStyle(
+  fontSize: 20.0,
+  fontFamily: 'Montserrat',
+  color: kSubtleblack,
+);
+
+const kTitleTextBlack = TextStyle(
   fontSize: 55.0,
-  fontFamily: 'Poppins',
+  fontFamily: 'Oswald',
   fontWeight: FontWeight.w500,
-  color: kNotWhiteColor,
+  color: kSubtleblack,
   height: 1.3,
 );
 
@@ -33,8 +49,7 @@ const kSubBoldWhiteTitle = TextStyle(
 const kButtonText = TextStyle(
   fontSize: 16.0,
   fontFamily: 'Montserrat',
-  fontWeight: FontWeight.w500,
-  color: kNotWhiteColor,
+  color: kSubtleblack,
 );
 
 const kDescriptiveTextWhite = TextStyle(

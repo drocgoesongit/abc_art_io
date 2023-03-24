@@ -20,7 +20,7 @@ class Testimonials extends StatelessWidget {
               padding: EdgeInsets.only(top: width / 2),
               child: const Text(
                 "Testimonials",
-                style: kTextStyleWhite,
+                style: kTitleTextBlack,
               ),
             ),
             const SizedBox(

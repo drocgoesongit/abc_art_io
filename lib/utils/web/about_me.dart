@@ -37,7 +37,7 @@ class AboutMe extends StatelessWidget {
                         children: const [
                           Text(
                             "Mobile App Developer",
-                            style: kTextStyleWhite,
+                            style: kTitleTextBlack,
                           ),
                           SizedBox(
                             height: 40.0,

@@ -44,7 +44,7 @@ class Projects extends StatelessWidget {
                           ),
                           const Text(
                             "FOOTBALL\nECOM APP",
-                            style: kTextStyleWhite,
+                            style: kTitleTextBlack,
                           ),
                           const SizedBox(
                             height: 20,
