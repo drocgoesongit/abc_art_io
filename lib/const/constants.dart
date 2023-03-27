@@ -39,6 +39,14 @@ const kTitleTextBlack = TextStyle(
   height: 1.3,
 );
 
+const kTitleTextBlackMobile = TextStyle(
+  fontSize: 24.0,
+  fontFamily: 'Oswald',
+  fontWeight: FontWeight.w500,
+  color: kSubtleblack,
+  height: 1.3,
+);
+
 const kSubBoldWhiteTitle = TextStyle(
   fontSize: 40.0,
   fontFamily: 'Oswald',

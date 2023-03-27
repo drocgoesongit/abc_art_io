@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/web_views/about_widget.dart';
-import 'package:portfolio/web_views/footer_widget.dart';
-import 'package:portfolio/web_views/gallery_widget.dart';
-import 'package:portfolio/web_views/home_widget.dart';
-import 'package:portfolio/web_views/project1_widget.dart';
-import 'package:portfolio/web_views/project2_widget.dart';
-import 'package:portfolio/web_views/project3_widget.dart';
-import 'package:portfolio/web_views/services_widget.dart';
-import 'package:portfolio/web_views/testi_widget.dart';
+import 'package:portfolio/utils/mobile/home_widget_mobile.dart';
+import 'package:portfolio/views/about_widget.dart';
+import 'package:portfolio/views/footer_widget.dart';
+import 'package:portfolio/views/gallery_widget.dart';
+import 'package:portfolio/views/home_widget.dart';
+import 'package:portfolio/views/project1_widget.dart';
+import 'package:portfolio/views/project2_widget.dart';
+import 'package:portfolio/views/project3_widget.dart';
+import 'package:portfolio/views/services_widget.dart';
+import 'package:portfolio/views/testi_widget.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 void main() {
@@ -84,13 +85,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _myList = [
     const GalleryWidget(),
     const GalleryWidget(),
-    const AboutWidget(),
-    const ServicesWidget(),
-    const Project1Widget(),
-    const Project2Widget(),
-    const Project3Widget(),
-    const TestimonialWidget(),
-    const FooterWidget()
   ];
 
   @override

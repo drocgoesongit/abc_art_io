@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/const/constants.dart';
+import 'package:portfolio/utils/mobile/create_art.dart';
 import 'package:portfolio/utils/web/image_section_web.dart';
-import 'package:portfolio/web_views/gallery_widget.dart';
+import 'package:portfolio/views/gallery_widget.dart';
 
 class HomeWidgetWeb extends StatelessWidget {
   final Function toHome;
@@ -16,6 +17,7 @@ class HomeWidgetWeb extends StatelessWidget {
       required this.toService,
       required this.toProject,
       required this.toTestimonial});
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -132,7 +134,8 @@ class HomeWidgetWeb extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ImageSectionWeb()));
+                                    builder: (context) =>
+                                        CreateArtWithPromptMobile()));
                           },
                           color: kBackgroundSubtleTealColor,
                           shape: RoundedRectangleBorder(
