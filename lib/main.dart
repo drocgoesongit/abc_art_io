@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/mobile/home_widget_mobile.dart';
 import 'package:portfolio/views/about_widget.dart';
@@ -12,17 +13,20 @@ import 'package:portfolio/views/testi_widget.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  MyApp({Key? key}) : super(key: key);
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp(
+      options: FirebaseOptions(
+          apiKey: "AIzaSyBkGR4AEhZ7u1FU3qlq7s6K0rdndYiYEwc",
+          appId: "787209101930",
+          messagingSenderId: "787209101930",
+          projectId: "abcartio",
+          storageBucket: "abcartio.appspot.com"));
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -31,7 +35,27 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: FutureBuilder(
+        future: _initialization,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return const MyHomePage();
+          }
+          if (snapshot.hasError) {
+            return const Scaffold(
+              body: Center(
+                child: Text("Error"),
+              ),
+            );
+          } else {
+            return const Scaffold(
+              body: Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
+          }
+        },
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:portfolio/const/constants.dart';
@@ -12,8 +13,10 @@ class CreateArtWithPromptMobile extends StatefulWidget {
 }
 
 class _CreateArtWithPromptMobileState extends State<CreateArtWithPromptMobile> {
-  Uint8List? _pickedImage = Uint8List(8);
+  Uint8List? _pickedImage;
   bool _isImageSelected = false;
+  bool _uploadSuccess = false;
+  String uploadUrl = "Getting URL...";
 
   // Get image function
   void getImage() async {
@@ -28,6 +31,33 @@ class _CreateArtWithPromptMobileState extends State<CreateArtWithPromptMobile> {
     } else {
       print('No image selected.');
     }
+  }
+
+  Future<String> uploadFile(Uint8List file, BuildContext context) async {
+    try {
+      FirebaseStorage storage = FirebaseStorage.instance;
+      Reference ref = storage.ref().child("version1/${DateTime.now()}.png");
+
+      // Upload the file to Firebase Storage
+      UploadTask uploadTask = ref.putData(file);
+
+      // Wait for the upload to complete
+      await uploadTask;
+
+      // Get the download URL of the uploaded file
+      String downloadURL = await ref.getDownloadURL();
+
+      return downloadURL;
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error: ${e.toString()}'),
+          duration: Duration(seconds: 3),
+        ),
+      );
+      return "Error";
+    }
+    // Create a reference to the Firebase Storage location
   }
 
   @override
@@ -177,10 +207,32 @@ class _CreateArtWithPromptMobileState extends State<CreateArtWithPromptMobile> {
               SizedBox(
                 height: height / 30,
               ),
+              Container(
+                width: height / 40,
+                height: height / 40,
+                color: _uploadSuccess ? Colors.green : Colors.red,
+                child: Text(uploadUrl,
+                    style: kTextBlack20.copyWith(fontSize: 14.0)),
+              ),
               MaterialButton(
                 elevation: 5.0,
-                onPressed: () {
+                onPressed: () async {
                   // Send request.
+                  if (_pickedImage == null) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Please select an image'),
+                      ),
+                    );
+                    return;
+                  } else {
+                    String downloadUrl =
+                        await uploadFile(_pickedImage!, context);
+                    setState(() {
+                      uploadUrl = downloadUrl;
+                      _uploadSuccess = true;
+                    });
+                  }
                 },
                 color: kMainAccentColor,
                 shape: RoundedRectangleBorder(
