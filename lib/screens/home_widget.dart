@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:portfolio/const/constants.dart';
-import 'package:portfolio/utils/mobile/home_widget_mobile.dart';
-import 'package:portfolio/utils/web/home.dart';
+import 'package:portfolio/views/mobile/home_widget_mobile.dart';
+import 'package:portfolio/views/web/home.dart';
 
 class HomeWidget extends StatefulWidget {
   final Function toHome;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/mobile/create_art.dart';
+import 'package:portfolio/views/mobile/create_art_mobile.dart';
 
 import '../../const/constants.dart';
 import '../web/image_section_web.dart';

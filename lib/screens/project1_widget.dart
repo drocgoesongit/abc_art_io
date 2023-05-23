@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/web/projects.dart';
+import 'package:portfolio/views/web/projects.dart';
 
 class Project1Widget extends StatelessWidget {
   const Project1Widget({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/web/services.dart';
+import 'package:portfolio/views/web/services.dart';
 
 import '../const/constants.dart';
 

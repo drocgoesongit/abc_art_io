@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/web/testimonials.dart';
+import 'package:portfolio/views/web/testimonials.dart';
 
 class TestimonialWidget extends StatelessWidget {
   const TestimonialWidget({Key? key}) : super(key: key);

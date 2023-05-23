@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/const/constants.dart';
-import 'package:portfolio/utils/mobile/create_art.dart';
-import 'package:portfolio/utils/web/image_section_web.dart';
-import 'package:portfolio/views/gallery_widget.dart';
+import 'package:portfolio/views/mobile/create_art_mobile.dart';
+import 'package:portfolio/views/web/image_section_web.dart';
+import 'package:portfolio/screens/create_art.dart';
+import 'package:portfolio/screens/gallery_widget.dart';
+
+import '../../utils/on_hover_text_widget.dart';
 
 class HomeWidgetWeb extends StatelessWidget {
   final Function toHome;
@@ -114,9 +117,15 @@ class HomeWidgetWeb extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          "Get amazing profile photos generated using AI",
-                          style: kTitleTextBlack,
+                        OnHoverText(
+                          hoveringStyle: kTitleTextBlack.copyWith(
+                              color: kMainAccentColor, fontSize: 40),
+                          nonHoveringStyle:
+                              kTitleTextBlack.copyWith(fontSize: 40),
+                          child: const Text(
+                            "Get amazing profile photos generated using AI",
+                            style: kTitleTextBlack,
+                          ),
                         ),
                         const SizedBox(
                           height: 30.0,
@@ -134,8 +143,7 @@ class HomeWidgetWeb extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        CreateArtWithPromptMobile()));
+                                    builder: (context) => CreateArt()));
                           },
                           color: kBackgroundSubtleTealColor,
                           shape: RoundedRectangleBorder(

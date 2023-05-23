@@ -1,15 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/mobile/home_widget_mobile.dart';
-import 'package:portfolio/views/about_widget.dart';
-import 'package:portfolio/views/footer_widget.dart';
-import 'package:portfolio/views/gallery_widget.dart';
-import 'package:portfolio/views/home_widget.dart';
-import 'package:portfolio/views/project1_widget.dart';
-import 'package:portfolio/views/project2_widget.dart';
-import 'package:portfolio/views/project3_widget.dart';
-import 'package:portfolio/views/services_widget.dart';
-import 'package:portfolio/views/testi_widget.dart';
+import 'package:portfolio/views/mobile/home_widget_mobile.dart';
+import 'package:portfolio/screens/about_widget.dart';
+import 'package:portfolio/screens/footer_widget.dart';
+import 'package:portfolio/screens/gallery_widget.dart';
+import 'package:portfolio/screens/home_widget.dart';
+import 'package:portfolio/screens/project1_widget.dart';
+import 'package:portfolio/screens/project2_widget.dart';
+import 'package:portfolio/screens/project3_widget.dart';
+import 'package:portfolio/screens/services_widget.dart';
+import 'package:portfolio/screens/testi_widget.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 void main() {

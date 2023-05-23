@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/views/web/project2.dart';
 
-import '../utils/web/about_me.dart';
-
-class AboutWidget extends StatelessWidget {
-  const AboutWidget({Key? key}) : super(key: key);
+class Project2Widget extends StatelessWidget {
+  const Project2Widget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return // AboutMe Container..
-        Container(
+    return Container(
+      height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
           image: DecorationImage(
         image: AssetImage("assets/images/plain_bg.png"),
         fit: BoxFit.cover,
       )),
-      height: MediaQuery.of(context).size.height,
-      child: AboutMe(
+      child: Project2(
         width: MediaQuery.of(context).size.width / 12,
       ),
     );

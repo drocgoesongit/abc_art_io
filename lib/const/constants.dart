@@ -10,6 +10,7 @@ const kInstaUrl = "https://www.instagram.com/mirza_nabeel_7/";
 const kGmail = "";
 
 const kMainAccentColor = Color(0xFF32FF88);
+const kSubtleAccentColor = Color(0xFFB5FBD2);
 const kSubtleblack = Color(0xFF383838);
 const kBackgroundSubtleTealColor = Color(0xFFEEFFF5);
 
@@ -33,6 +34,14 @@ const kTextBlack20 = TextStyle(
 
 const kTitleTextBlack = TextStyle(
   fontSize: 55.0,
+  fontFamily: 'Oswald',
+  fontWeight: FontWeight.w500,
+  color: kSubtleblack,
+  height: 1.3,
+);
+
+const kTitleCreateArt = TextStyle(
+  fontSize: 40.0,
   fontFamily: 'Oswald',
   fontWeight: FontWeight.w500,
   color: kSubtleblack,

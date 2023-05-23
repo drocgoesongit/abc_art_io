@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/web/footers.dart';
+import 'package:portfolio/views/web/project3.dart';
 
-class FooterWidget extends StatelessWidget {
-  const FooterWidget({Key? key}) : super(key: key);
+class Project3Widget extends StatelessWidget {
+  const Project3Widget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
           image: DecorationImage(
         image: AssetImage("assets/images/plain_bg.png"),
         fit: BoxFit.cover,
       )),
-      child: Footer(),
+      child: Project3(
+        width: MediaQuery.of(context).size.width / 12,
+      ),
     );
   }
 }
